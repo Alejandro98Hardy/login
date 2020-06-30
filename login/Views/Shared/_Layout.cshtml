@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Creative - Start Bootstrap Theme</title>
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+    <!-- Third party plugin CSS-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
+    @*<link href="~/StyleStore/StyleSheet1.css" rel="stylesheet" />*@
+    @Styles.Render("~/StyleStore/StyleSheet1.css")
+
+
+</head>
+@{ 
+    var claseFila = "btn btn-xl js-scroll-trigger text-white ";
+
+
+}
+<body id="page-top">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 " id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">@Html.ActionLink("GameSlayer-X", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="navbar-collapse collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                        <li class="nav-item"><div class="@claseFila" href="">@Html.ActionLink("Eventos", "About", "Home")</div></li>
+                        <li class="nav-item"><div class="@claseFila" href="">@Html.ActionLink("Noticias", "Contact", "Home")</div></li>
+                        <li class="nav-item"><div class="@claseFila" href="">@Html.ActionLink("Juegos", "Juegos", "Home")</div></li>
+                        <li class="nav-item"><a class="@claseFila" href="#contact">Contactos</a></li>
+                        <li class="nav-item">
+                            <div class="@claseFila" href="">
+                                @Html.ActionLink("Iniciar sesión", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    
+    @*<div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("GameSlayer-X", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="">
+                    <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                        <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
+                        <li>@Html.ActionLink("Noticiaa", "Noticias", "Home")</li>
+                    </ul>
+                    @Html.Partial("_LoginPartial")
+                </div>
+            </div>
+        </div>*@
+
+
+    @RenderBody()
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    <section class="page-section bg-primary" id="contact">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="mt-0 text-white">¿Comó contactarme?</h2>
+                    <hr class="divider my-4" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
+                    <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
+                    <div><a class="d-block text-white">(52) 5561449976</a></div>
+                </div>
+                <div class="col-lg-4 mr-auto text-center">
+                    <i class="fas fa-envelope fa-3x mb-3 text-muted"></i><!-- Make sure to change the email address in BOTH the anchor text and the link target below!-->
+                    <a class="d-block text-white">alucardhardy@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer-->
+    <footer class="bg-dark py-5">
+        <div class="container"><div class="small text-center text-muted">Copyright © @DateTime.Now.Year - GameSlayer-X</div></div>
+    </footer>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <!-- Third party plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="~/Js/jsTienda.js"></script>
+</body>
+</html>

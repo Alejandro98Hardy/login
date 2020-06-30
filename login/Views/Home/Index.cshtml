@@ -1,0 +1,182 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    var claseFila = "btn btn-light btn-xl js-scroll-trigger text-white";
+
+
+}
+<style>
+</style>
+
+
+<header class="masthead">
+
+    <div class="container h-100">
+        <div class="row h-100 align-items-center justify-content-center text-center">
+            <div class="col-lg-10 align-self-end">
+                <h1 class="text-uppercase text-white font-weight-bold">La mejor tienda experta en videojuegos</h1>
+                <hr class="divider my-4" />
+            </div>
+            <div class="col-lg-8 align-self-baseline">
+                <p class="text-white-75 font-weight-light mb-5">Aqui encontraras los mejores videojuegos para pasar tus mejores dias en cuarentena</p>
+                <hr class=" my-4" />
+            </div>
+        </div>
+    </div>
+</header>
+<section class="page-section bg-primary" id="about">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="text-white mt-0">Nuevas Eventos</h2>
+                <div class="container mt-3">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+                        <!-- Indicators -->
+                        <ul class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                        </ul>
+
+                        <!-- The slideshow -->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="~/Imagenes/f9.jpg" alt="Los Angeles" width="700" height="370">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="~/Imagenes/f10.jpg" alt="Chicago" width="700" height="370">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="~/Imagenes/f12.jpg" alt="New York" width="700" height="370">
+                            </div>
+                        </div>
+
+                        <!-- Left and right controls -->
+                        <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+                    </div>
+                </div>
+                <hr class="divider my-4" />
+                <p class="text-dark-50 mb-4"></p>
+
+                <div class="@claseFila">@Html.ActionLink("Ver Eventos", "About", "Home")</div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Services section-->
+<section class="page-section" id="services">
+    <div class="container ">
+        <h2 class="text-center mt-0">Noticias del momento.</h2>
+        <hr class="divider my-4" />
+        <div class="row justify-content-center">
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="mt-5">
+                    <i class="fas fa-4x fa-biohazard  mb-4"></i>
+                    <h3 class="h4 mb-2">Coronavirus</h3>
+                    <p class="text-muted mb-0">Han cancelado muchas convenciones   por ello</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="mt-5">
+                    <i class="fas fa-4x fa-laptop-code  mb-4"></i>
+                    <h3 class="h4 mb-2">Ofertas</h3>
+                    <p class="text-muted mb-0">Encuentra los exitos de la vieja escuela varatos</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="mt-5">
+                    <i class="fas fa-4x fa-cubes  mb-4"></i>
+                    <h3 class="h4 mb-2">Minecraft</h3>
+                    <p class="text-muted mb-0">¿Como seria jugar Minecraft en Realidad Virtual?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <div class="@claseFila">@Html.ActionLink("Ver Noticias", "Contact", "Home")</div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Portfolio section-->
+<section id="portfolio">
+    <div class="container-fluid p-0">
+        <h2 class="text-center mt-0">Nuevos Lanzamientos.</h2>
+        <div class="row no-gutters">
+            <div class="col-lg-4 col-sm-6">
+                <a class="portfolio-box" href="~/Imagenes/portfolio/fullsize/doom.jpg">
+                    <img class="img-fluid" src="~/Imagenes/portfolio/thumbnails/doom.jpg" alt="" />
+                    <div class="portfolio-box-caption">
+                        <div class="project-category text-white-50">ESTRENOS</div>
+                        <div class="project-name">DOOM Eternal</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <a class="portfolio-box" href="~/Imagenes/portfolio/fullsize/crash.jpg">
+                    <img class="img-fluid" src="~/Imagenes/portfolio/thumbnails/crash.jpg" alt="" />
+                    <div class="portfolio-box-caption">
+                        <div class="project-category text-white-50">ESTRENOS</div>
+                        <div class="project-name">CTR<br>Crash Team Racing <br>Nitro-Fueled</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <a class="portfolio-box" href="~/Imagenes/portfolio/fullsize/resident3.jpg">
+                    <img class="img-fluid" src="~/Imagenes/portfolio/thumbnails/resident3.jpg" alt="" />
+                    <div class="portfolio-box-caption">
+                        <div class="project-category text-white-50">ESTRENOS</div>
+                        <div class="project-name">Resident Evil 3 Remake<br> Nemesis</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <a class="portfolio-box" href="~/Imagenes/portfolio/fullsize/DarkS.jpg">
+                    <img class="img-fluid" src="~/Imagenes/portfolio/thumbnails/DarkS.jpg" alt="" />
+                    <div class="portfolio-box-caption">
+                        <div class="project-category text-white-50">ESTRENOS</div>
+                        <div class="project-name">Darksiders <br> Genesis</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <a class="portfolio-box" href="~/Imagenes/portfolio/fullsize/Life.jpg">
+                    <img class="img-fluid" src="~/Imagenes/portfolio/thumbnails/Life.jpg" alt="" />
+                    <div class="portfolio-box-caption">
+                        <div class="project-category text-white-50">ESTRENOS</div>
+                        <div class="project-name">Half-Life: <br> Alyx</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <a class="portfolio-box" href="~/Imagenes/portfolio/fullsize/yigiho.jpg">
+                    <img class="img-fluid" src="~/Imagenes/portfolio/thumbnails/yigiho.jpg" alt="" />
+                    <div class="portfolio-box-caption p-3">
+                        <div class="project-category text-white-50">ESTRENOS</div>
+                        <div class="project-name">Yu-Gi-Oh! Legacy of the Duelist: <br> Link Evolution </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</section>
+<!-- Boton -->
+<section class="page-section bg-primary">
+    <div class="container">
+        <div class="row justify-content-center ">
+            <div class="col-lg-8 text-center">
+                <div class="@claseFila">@Html.ActionLink("Ver Juegos", "Juegos", "Home")</div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Contact section-->

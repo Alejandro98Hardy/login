@@ -1,0 +1,81 @@
+﻿@using login.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = "Iniciar sesión";
+}
+        <header class="masthead">
+
+            <div class="container h-100">
+                <div class="row h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-10 align-self-end">
+                        <section class="formlogin" id="loginForm">
+                            @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                            {
+                                @Html.AntiForgeryToken()
+                                <h2 class="text-uppercase text-white-75 font-weight-light mb-5">Inicia tu mejor experiencia.</h2>
+                                <hr class="divider my-4" />
+                                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                <div class="form-group">
+                                    <h3 class="form-group">
+                                        @Html.LabelFor(m => m.Email, new { @class = "" })
+                                        <div class="col-md-10">
+                                            @Html.TextBoxFor(m => m.Email, new { @class= "form-control" })
+                                            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "" })
+                                        </div>
+                                    </h3>
+                                   
+                                </div>
+                                <div class="form-group">
+                                    <h3 class="form-group">
+                                        @Html.LabelFor(m => m.Password, new { @class = "" })
+
+                                        <div class="col-md-10">
+                                            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "" })
+                                        </div>
+                                    </h3>
+                                    
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-offset-2 col-md-10">
+                                        <h4 style="text-align:center;" class="checkbox">
+                                            @Html.CheckBoxFor(m => m.RememberMe)
+                                            @Html.LabelFor(m => m.RememberMe)
+                                        </h4>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-offset-2 col-md-10">
+                                        <h4 style="text-align: center; left: 100px;">
+                                            <input type="submit" value="Iniciar sesión" class="inputsubmit form-group" />
+                                        </h4>
+                                        <p>resgistro en google o facebook</p>
+                                    </div>
+                                </div>
+                                <p class="pregist">
+                                    @Html.ActionLink("Registrarse ahora", "Register")
+                                </p>
+                                @* Habilite esta opción una vez tenga la confirmación de la cuenta habilitada para la funcionalidad de restablecimiento de contraseña
+            <p>
+                @Html.ActionLink("¿Ha olvidado su contraseña?", "ForgotPassword")
+            </p>*@
+                            }
+                        </section>
+                        
+                    </div>
+                    <div class="col-lg-8 align-self-baseline">
+                        <hr class=" my-4" />
+                    </div>
+                </div>
+            </div>
+        </header>       
+
+    @*<div class="col-md-4">
+        <section id="socialLoginForm">
+            @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
+        </section>
+    </div>*@
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
