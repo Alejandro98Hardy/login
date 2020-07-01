@@ -61,8 +61,8 @@ namespace login
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{
-            //    ClientId = "",
-            //    ClientSecret = ""
+            //    ClientId = "645923428104-s03bqd3nveer1s7c9ultdg4o7rgvsoue.apps.googleusercontent.com",
+            //ClientSecret = "3Ac3-YuXYT-TWUccLhT3JnIl"
             //});
         }
     }
