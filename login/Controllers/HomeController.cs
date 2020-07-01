@@ -30,5 +30,13 @@ namespace login.Controllers
         {
             return View();
         }
+        public ActionResult JuegosExcluisvos()
+        {
+            return View();
+        }
+        public ActionResult RegisJuegos()
+        {
+            return View();
+        }
     }
 }
