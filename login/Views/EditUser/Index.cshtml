@@ -1,4 +1,4 @@
-﻿@model IEnumerable<login.Models.EditUserViewModel>
+﻿@model IEnumerable<login.Models.ApplicationUser>
 
 @{
     ViewBag.Title = "Index";
@@ -12,7 +12,7 @@
 </p>
 <table class="table">
     <tr>
-        <th>
+        <th>  
             @Html.DisplayNameFor(model => model.Email)
         </th>
         <th></th>

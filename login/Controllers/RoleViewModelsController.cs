@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace login.Controllers
 {
-    [Authorize(Roles = "Admin")]
+  
     public class RoleViewModelsController : Controller
     {
         //private ApplicationDbContext db = new ApplicationDbContext();
