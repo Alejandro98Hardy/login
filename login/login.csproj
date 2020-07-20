@@ -574,6 +574,9 @@
     <Content Include="Views\EditUser\Index.cshtml" />
     <Content Include="Views\Home\JuegosExcluisvos.cshtml" />
     <Content Include="Views\Home\RegisJuegos.cshtml" />
+    <Content Include="Views\Home\UpdateNoticias.cshtml" />
+    <Content Include="Views\Home\UpdateEventos.cshtml" />
+    <Content Include="Views\Home\ContactarAdm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -6,7 +6,8 @@
 }
     <header class="masthead">
 
-            <div class="row h-75 align-items-center justify-content-center text-center">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center justify-content-center text-center">
                 <div class="col-lg-10 align-self-end">
                     <section class="formlogin" id="loginForm">
                         <h2 style="color:white;">Crear rol</h2>
@@ -21,7 +22,7 @@
                                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
                                 <div class="form-label-group">
-                                    @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                                   
                                     <div class="form-label-group">
                                         @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
                                         @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
@@ -30,16 +31,21 @@
 
                                 <div class="form-group">
                                     <div class="form-label-group">
-                                        <input type="submit" value="Create" class="btn btn-lg btn-primary btn-block text-uppercase" />
-                                     </div>
+                                        <input type="submit" value="Create" class="inputsubmit form-group" />
+                                    </div>
+                                </div>
+                                <div class="inputsubmit form-group">
+                                    @Html.ActionLink("Regresar a la lista", "Index")
                                 </div>
                             </div>
                         }
                     </section>
                 </div>
-          
-       
-</header>
-        <div>
-            @Html.ActionLink("Back to List", "Index")
-        </div>
+                <div class="col-lg-8 align-self-baseline">
+                    <hr class=" my-4" />
+                </div>
+            </div>
+            </div>
+
+    </header>
+        

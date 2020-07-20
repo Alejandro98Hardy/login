@@ -36,10 +36,11 @@
                     <ul class="navbar-nav ml-auto my-2 my-lg-0">
                         <li class="nav-item"><div class="@claseFila" href="">@Html.ActionLink("Eventos", "About", "Home")</div></li>
                         <li class="nav-item"><div class="@claseFila" href="">@Html.ActionLink("Noticias", "Contact", "Home")</div></li>
-                        @if (Request.IsAuthenticated && User.IsInRole("Invitado"))
+                        @if (Request.IsAuthenticated && User.IsInRole("Cliente"))
                         {
                             <li class="nav-item"><div class="@claseFila" href="">@Html.ActionLink("Juegos Pre", "JuegosExcluisvos", "Home")</div></li>
                             <li class="nav-item"><div class="@claseFila" href="">@Html.ActionLink("Codigo", "JuegosExcluisvos", "Home")</div></li>
+
                         }
                         <li class="nav-item"><div class="@claseFila" href="">@Html.ActionLink("Juegos", "Juegos", "Home")</div></li>
                         <li class="nav-item"><a class="@claseFila" href="#contact">Contactos</a></li>
@@ -60,20 +61,30 @@
                         }
                         @if (Request.IsAuthenticated && User.IsInRole("EventosAdm"))
                         {
-                            <li class="nav-item"><div class="@claseFila" href="">@Html.ActionLink("Juegos Pre", "JuegosExcluisvos", "Home")</div></li>
+                            <li class="nav-item"><div class="@claseFila" href="">@Html.ActionLink("EvenUp", "UpdateEventos", "Home")</div></li>
+                            <li class="nav-item"><div class="@claseFila" href="">@Html.ActionLink("contAdm", "ContactarAdm", "Home")</div></li>
                         }
                         @if (Request.IsAuthenticated && User.IsInRole("JuegosAdm"))
                         {
-                            <li class="nav-item"><div class="@claseFila" href="">@Html.ActionLink("Juegos Pre", "JuegosExcluisvos", "Home")</div></li>
+                            <li class="nav-item"><div class="@claseFila" href="">@Html.ActionLink("juegos", "RegisJuegos", "Home")</div></li>
+                            <li class="nav-item"><div class="@claseFila" href="">@Html.ActionLink("contAdm", "ContactarAdm", "Home")</div></li>
                         }
                         @if (Request.IsAuthenticated && User.IsInRole("NoticiasAdm"))
                         {
-                            <li class="nav-item"><div class="@claseFila" href="">@Html.ActionLink("Juegos Pre", "JuegosExcluisvos", "Home")</div></li>
+                            <li class="nav-item"><div class="@claseFila" href="">@Html.ActionLink("NotUp", "UpdateNoticias", "Home")</div></li>
+                            <li class="nav-item"><div class="@claseFila" href="">@Html.ActionLink("contAdm", "ContactarAdm", "Home")</div></li>
                         }
                         @if (Request.IsAuthenticated && User.IsInRole("UsuariosAdm"))
                         {
-                            <li class="nav-item"><div class="@claseFila" href="">@Html.ActionLink("Roles", "Index", "RoleViewModels")</div></li>
-                            <li class="nav-item"><div class="@claseFila" href="">@Html.ActionLink("Usuarios", "Index", "EditUser")</div></li>
+                            <li class="nav-item dropdown @claseFila">
+                                <a class=" dropdown-toggle" data-toggle="dropdown" href="#">AdminUser</a>
+                                <div style="background: black;" class="dropdown-menu">
+                                    <a class="@claseFila" href="">@Html.ActionLink("Roles", "Index", "RoleViewModels")</a>
+                                    <a class="@claseFila" href="">@Html.ActionLink("Usuarios", "Index", "EditUser")</a>
+                                    <a class="@claseFila" href="">@Html.ActionLink("contAdm", "ContactarAdm", "Home")</a>
+                                </div>
+                            </li>
+                           
                         }
                         <li class="nav-item">
                             <div class="@claseFila" href="">

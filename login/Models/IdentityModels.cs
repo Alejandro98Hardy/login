@@ -34,5 +34,7 @@ namespace login.Models
         public System.Data.Entity.DbSet<login.Models.RoleViewModel> RoleViewModels { get; set; }
 
         public System.Data.Entity.DbSet<login.Models.EditUserViewModel> EditUserViewModels { get; set; }
+
+       
     }
 }

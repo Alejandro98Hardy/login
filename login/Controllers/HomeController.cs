@@ -38,5 +38,17 @@ namespace login.Controllers
         {
             return View();
         }
+        public ActionResult UpdateEventos()
+        {
+            return View();
+        }
+        public ActionResult UpdateNoticias()
+        {
+            return View();
+        }
+        public ActionResult ContactarAdm()
+        {
+            return View();
+        }
     }
 }
